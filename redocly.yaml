@@ -1,0 +1,3 @@
+apis:
+  octo-deck-api:
+    root: ./tsp-output/schema/openapi.yaml

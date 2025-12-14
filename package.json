@@ -1,0 +1,23 @@
+{
+  "name": "octo-deck-api",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.24.0",
+  "scripts": {
+    "build": "pnpm clean && pnpm compile && pnpm docs:build",
+    "compile": "tsp compile .",
+    "watch": "tsp compile . --watch",
+    "clean": "rm -rf tsp-output dist",
+    "docs:build": "redocly build-docs octo-deck-api -o ./dist/octo-deck-api.html && redocly build-docs octo-deck-api -o ./dist/octo-deck-api.html",
+    "docs:preview": "redocly preview --project-dir=./tsp-output/schema/"
+  },
+  "dependencies": {
+    "@typespec/http": "latest",
+    "@typespec/openapi": "latest",
+    "@typespec/openapi3": "latest",
+    "@typespec/rest": "latest"
+  },
+  "devDependencies": {
+    "@redocly/cli": "latest",
+    "@typespec/compiler": "latest"
+  }
+}
