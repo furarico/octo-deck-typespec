@@ -15,10 +15,22 @@ namespace OctoDeckApi {
   /**
    * Octo Deck API
    */
-  @route("/octo-deck")
+  @route("/cards")
   @get
   @summary("カード一覧取得")
   op getCards(): Body<{
     cards: Card[];
+  }>;
+  @route("/cards/{id}")
+  @get
+  @summary("カード取得")
+  op getCard(@path id: string): Body<{
+    card: Card;
+  }>;
+  @route("/cards/me")
+  @get
+  @summary("自分のカード取得")
+  op getMyCard(): Body<{
+    card: Card;
   }>;
 }
