@@ -1,6 +1,6 @@
 namespace OctoDeckApi {
   model Card {
-    id: string;
+    githubId: string;
     userName: string;
     fullName: string;
     iconUrl: string;
@@ -16,5 +16,16 @@ namespace OctoDeckApi {
      * 5x5の二次元配列。trueがブロック
      */
     blocks: boolean[][];
+  }
+  model Contribution {
+    date: plainDate;
+    count: int32;
+  }
+  model UserStats {
+    contributions: Contribution[];
+  }
+  model Community {
+    id: string;
+    name: string;
   }
 }
