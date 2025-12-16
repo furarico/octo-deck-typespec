@@ -25,34 +25,34 @@ namespace OctoDeckApi {
   /**
    * デッキにないカードも取得できる
    */
-  @route("/cards/{id}")
+  @route("/cards/{githubId}")
   @get
   @summary("指定したカード取得")
-  op getCard(@path id: string): Body<{
+  op getCard(@path githubId: string): Body<{
     card: Card;
   }>;
   @route("/cards/me")
   @get
-  @summary("自分の統計情報取得")
+  @summary("自分のカード取得")
   op getMyCard(): Body<{
     card: Card;
   }>;
   @route("/cards")
   @post
   @summary("カードをデッキに追加")
-  op addCardToDeck(@body id: string): Body<{
+  op addCardToDeck(@body githubId: string): Body<{
     card: Card;
   }>;
-  @route("/cards/{id}")
+  @route("/cards/{githubId}")
   @delete
   @summary("カードをデッキから削除")
-  op removeCardFromDeck(@path id: string): Body<{
+  op removeCardFromDeck(@path githubId: string): Body<{
     card: Card;
   }>;
-  @route("/stats/{id}")
+  @route("/stats/{githubId}")
   @get
   @summary("ユーザーの統計情報取得")
-  op getUserStats(@path id: string): Body<{
+  op getUserStats(@path githubId: string): Body<{
     stats: UserStats;
   }>;
   @route("/stats/me")
@@ -96,14 +96,14 @@ namespace OctoDeckApi {
   }>;
   @route("/communities/{id}/cards")
   @post
-  @summary("指定したコミュニティにカードを追加")
-  op addCardToCommunity(@path id: string, @body card: Card): Body<{
+  @summary("指定したコミュニティに自分のカードを追加")
+  op addCardToCommunity(@path id: string): Body<{
     card: Card;
   }>;
-  @route("/communities/{id}/cards/{cardId}")
+  @route("/communities/{id}/cards")
   @delete
-  @summary("指定したコミュニティのカードを削除")
-  op removeCardFromCommunity(@path id: string, @path cardId: string): Body<{
+  @summary("指定したコミュニティの自分のカードを削除")
+  op removeCardFromCommunity(@path id: string): Body<{
     card: Card;
   }>;
 }
