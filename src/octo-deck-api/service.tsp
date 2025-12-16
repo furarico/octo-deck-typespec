@@ -49,12 +49,6 @@ namespace OctoDeckApi {
   op getUserStats(@path id: string): Body<{
     stats: UserStats;
   }>;
-  @route("/stats/me")
-  @get
-  @summary("自分の統計情報取得")
-  op getMyStats(): Body<{
-    stats: UserStats;
-  }>;
   @route("/communities")
   @get
   @summary("コミュニティ一覧取得")
