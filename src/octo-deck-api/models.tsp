@@ -20,7 +20,6 @@ namespace OctoDeckApi {
   model Contribution {
     date: plainDate;
     count: int32;
-    type: "commit" | "pull_request" | "issue" | "review";
   }
   model UserStats {
     contributions: Contribution[];
