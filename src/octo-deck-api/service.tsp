@@ -11,6 +11,7 @@ using OpenAPI;
 @server("https://stg.api.octo-deck.furari.co", "Staging")
 @server("https://dev.api.octo-deck.furari.co", "Development")
 @server("http://localhost:8080", "Local")
+@useAuth(BearerAuth)
 namespace OctoDeckApi {
   /**
    * 自分のデッキを取得
