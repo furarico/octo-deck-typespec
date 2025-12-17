@@ -7,9 +7,9 @@ using OpenAPI;
 
 @service(#{ title: "Octo Deck API" })
 @info(#{ version: "1.0.0" })
-@server("https://api.octo-deck.furari.co", "Production")
-@server("https://stg.api.octo-deck.furari.co", "Staging")
-@server("https://dev.api.octo-deck.furari.co", "Development")
+@server("https://api.octodeck.furari.co", "Production")
+@server("https://stg.api.octodeck.furari.co", "Staging")
+@server("https://dev.api.octodeck.furari.co", "Development")
 @server("http://localhost:8080", "Local")
 @useAuth(BearerAuth)
 namespace OctoDeckApi {
