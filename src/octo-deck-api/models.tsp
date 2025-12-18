@@ -33,8 +33,17 @@ namespace OctoDeckApi {
     date: plainDate;
     count: int32;
   }
+  model ContributionDetail {
+    reviewCount: int32;
+    commitCount: int32;
+    pullRequestCount: int32;
+    issueCount: int32;
+  }
   model UserStats {
     contributions: Contribution[];
+    totalContribution: int32;
+    mostUsedLanguage: Language;
+    contributionDetail: ContributionDetail;
   }
   model Community {
     id: string;
