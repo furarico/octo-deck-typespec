@@ -5,6 +5,18 @@ namespace OctoDeckApi {
     fullName: string;
     iconUrl: string;
     identicon: Identicon;
+    mostUsedLanguage: Language;
+  }
+  model Language {
+    /**
+     * 言語名
+     */
+    name: string;
+
+    /**
+     * カラーコード 例: #RRGGBB
+     */
+    color: string;
   }
   model Identicon {
     /**
