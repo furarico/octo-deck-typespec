@@ -33,6 +33,6 @@ namespace OctoDeckApi {
     bestContributor: Card;
     bestCommitter: Card;
     bestPullRequester: Card;
-    bestIssueer: Card;
+    bestIssuer: Card;
   }
 }
