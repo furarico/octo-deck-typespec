@@ -28,4 +28,11 @@ namespace OctoDeckApi {
     id: string;
     name: string;
   }
+  model HighlightedCard {
+    bestReviewer: Card;
+    bestContributor: Card;
+    bestCommitter: Card;
+    bestPullRequester: Card;
+    bestIssueer: Card;
+  }
 }
