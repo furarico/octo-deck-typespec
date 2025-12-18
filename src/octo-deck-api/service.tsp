@@ -75,6 +75,7 @@ namespace OctoDeckApi {
   @summary("指定したコミュニティ取得")
   op getCommunity(@path id: string): Body<{
     community: Community;
+    highlightedCard: HighlightedCard;
   }>;
   @route("/communities/{id}/cards")
   @get
