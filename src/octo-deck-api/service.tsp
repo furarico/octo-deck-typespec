@@ -86,7 +86,13 @@ namespace OctoDeckApi {
   @route("/communities")
   @post
   @summary("コミュニティを作成")
-  op createCommunity(@body name: string): Body<{
+  op createCommunity(
+    @body body: {
+      name: string;
+      startDateTime: utcDateTime;
+      endDateTime: utcDateTime;
+    },
+  ): Body<{
     community: Community;
   }>;
   @route("/communities/{id}")
