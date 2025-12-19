@@ -48,6 +48,8 @@ namespace OctoDeckApi {
   model Community {
     id: string;
     name: string;
+    startDateTime: utcDateTime;
+    endDateTime: utcDateTime;
   }
   model HighlightedCard {
     bestReviewer: Card;
