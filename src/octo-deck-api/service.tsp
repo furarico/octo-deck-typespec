@@ -49,6 +49,12 @@ namespace OctoDeckApi {
   op removeCardFromDeck(@path githubId: string): Body<{
     card: Card;
   }>;
+  @route("/cards/refresh")
+  @put
+  @summary("データベース内のカードすべてを更新")
+  op refreshAllCards(): Body<{
+    card: Card[];
+  }>;
   @route("/stats/{githubId}")
   @get
   @summary("ユーザーの統計情報取得")
