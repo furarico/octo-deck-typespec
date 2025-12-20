@@ -101,6 +101,16 @@ namespace OctoDeckApi {
   op deleteCommunity(@path id: string): Body<{
     community: Community;
   }>;
+  /**
+   * GitHub APIを呼び出してHighlightedCardを再計算し、データベースに保存する
+   */
+  @route("/communities/{id}/refresh")
+  @put
+  @summary("コミュニティのHighlightedCardを更新")
+  op refreshCommunity(@path id: string): Body<{
+    community: Community;
+    highlightedCard: HighlightedCard;
+  }>;
   @route("/communities/{id}/cards")
   @post
   @summary("指定したコミュニティに自分のカードを追加")
